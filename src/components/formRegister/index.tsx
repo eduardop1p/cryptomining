@@ -77,14 +77,10 @@ export default function FormRegister() {
         confirmPassword,
       });
 
-      const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_URL_API}/login`,
-        { emailOrUserName: email, password: password }
-      );
-      localStorage.setItem(
-        'auth',
-        JSON.stringify({ token: data.token, id: data.id })
-      );
+      await axios.post(`${process.env.NEXT_PUBLIC_URL_API}/login`, {
+        emailOrUserName: email,
+        password: password,
+      });
       redirect.push('/user/dasboard');
     } catch (err: any) {
       toast.error(err.response.data.message, {

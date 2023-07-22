@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-import Auth from '@/lib/auth';
 
 import './global.css';
 
 import StyledComponentsRegistry from '@/lib/registry';
+
+// para refresh em links é somente usar os links nativos do html <a href=''></a>
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -36,7 +37,7 @@ export default function RootLayout({
       </head>
       <body className={roboto.className}>
         <StyledComponentsRegistry>
-          <Auth>{children}</Auth>
+          <>{children}</>
         </StyledComponentsRegistry>
       </body>
     </html>

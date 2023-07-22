@@ -66,26 +66,23 @@ export async function POST(req: NextRequest, res: NextResponse) {
     expiresIn: rememberPassword ? '10d' : '5h',
   });
 
+  // return new Response(JSON.stringify({ id, message, token }), {
+  //   status: 200,
+  //   headers: {
+  //     Authorization: `Bearer ${token}`,
+  //     'Content-Type': 'application/json',
+  //   },
+  // });
+
   return new Response(JSON.stringify({ id, message, token }), {
     status: 200,
     headers: {
-      Authorization: `Bearer ${token}`,
+      'Set-Cookie': serialize('token', token, {
+        httpOnly: true,
+        maxAge: rememberPassword ? 864000 : 18000,
+        path: '/',
+      }),
       'Content-Type': 'application/json',
     },
   });
-
-  // return new Response(
-  //   JSON.stringify({ id, message, name, email, rememberPassword, token }),
-  //   {
-  //     status: 200,
-  //     headers: {
-  //       'Set-Cookie': serialize('token', token, {
-  //         httpOnly: true,
-  //         maxAge: rememberPassword ? 864000 : 18000,
-  //         path: '/',
-  //       }),
-  //       'Content-Type': 'application/json',
-  //     },
-  //   }
-  // );
 }

@@ -40,14 +40,7 @@ export default function FormLogin() {
 
     try {
       setLoading(true);
-      const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_URL_API}/login`,
-        body
-      );
-      localStorage.setItem(
-        'auth',
-        JSON.stringify({ token: data.token, id: data.id })
-      );
+      await axios.post(`${process.env.NEXT_PUBLIC_URL_API}/login`, body);
       redirect.push('/user/dasboard');
     } catch (err: any) {
       toast.error(err.response.data.message, {
