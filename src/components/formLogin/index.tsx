@@ -45,7 +45,8 @@ export default function FormLogin() {
       redirect.push('/user/dasboard');
     } catch (err: any) {
       toast.error(
-        get(err.response, 'err.response.data.message', false)
+        // no get estou verificando se tem data.message dentro de err.response se não ouver ele vai me retonar false
+        get(err.response, 'data.message', false)
           ? err.response.data.message
           : 'internal server error 500',
         {
