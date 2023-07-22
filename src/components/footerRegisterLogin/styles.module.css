@@ -1,0 +1,21 @@
+.footer{
+  background-image: url(/assets/imgs/bg.png);
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.footer > img{
+  position: absolute;
+  z-index: 1;
+  object-fit: cover;
+  opacity: 0.05;
+}
+.footer > span{
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 15rem);
+  padding: 2rem 0;
+  color: #f6f5f5;
+  font-size: 1rem;
+  text-align: left;
+}
