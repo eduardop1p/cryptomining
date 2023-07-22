@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
+import { get } from 'lodash';
 import axios from 'axios';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -43,16 +44,21 @@ export default function FormLogin() {
       await axios.post(`${process.env.NEXT_PUBLIC_URL_API}/login`, body);
       redirect.push('/user/dasboard');
     } catch (err: any) {
-      toast.error(err.response.data.message, {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-      });
+      toast.error(
+        get(err.response.data, 'err.response.data', false)
+          ? err.response.data.message
+          : 'internal server error 500',
+        {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        }
+      );
     } finally {
       setLoading(false);
     }
