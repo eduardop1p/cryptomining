@@ -27,7 +27,7 @@ export function middleware(req: NextRequest, res: NextResponse) {
   // console.log(currentPath);
   // console.log(cookies.get('token'));
 
-  response.headers.append('Access-Control-Allow-Origin', '*');
+  response.headers.append('Access-Control-Allow-Origin', 'same-origin');
 
   return response;
 }
