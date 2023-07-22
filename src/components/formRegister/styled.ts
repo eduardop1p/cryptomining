@@ -83,6 +83,8 @@ export const Container = styled.div`
     }
 
     & > button {
+      position: relative;
+      overflow: hidden;
       background-color: #f6a200;
       color: #fff;
       border-radius: 35px;
