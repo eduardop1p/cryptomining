@@ -85,7 +85,7 @@ export default function FormRegister() {
       redirect.push('/user/dasboard');
     } catch (err: any) {
       toast.error(
-        get(err.response.data, 'err.response.data', false)
+        get(err.response, 'err.response.data', false)
           ? err.response.data.message
           : 'internal server error 500',
         {
