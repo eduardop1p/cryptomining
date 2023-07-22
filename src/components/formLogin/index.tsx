@@ -78,6 +78,7 @@ export default function FormLogin() {
         draggable
         pauseOnHover
         theme="colored"
+        style={{ zIndex: 6 }}
       />
       <h1>Sign In Your Account</h1>
       <p>Please Insert your login credentials to access your data.</p>
