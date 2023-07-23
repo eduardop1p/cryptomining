@@ -10,6 +10,7 @@ export const HeaderContainer = styled.header<Props>`
   background-color: transparent;
   display: flex;
   justify-content: center;
+  min-width: 1360px;
   width: 100%;
   height: 50px;
   position: absolute;
@@ -68,6 +69,7 @@ export const ContainerFixed = styled.div<Props>`
   height: 50px;
   background-color: #272d43;
   width: 100%;
+  min-width: 1360px;
   visibility: hidden;
   top: 0;
   position: fixed;
