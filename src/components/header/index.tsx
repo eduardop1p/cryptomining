@@ -17,18 +17,24 @@ import {
 interface Props {
   fixedNav?: boolean;
   registerOrLogin?: boolean;
+  bigPadding?: boolean;
 }
 
 export default function Header({
   fixedNav = true,
   registerOrLogin = false,
+  bigPadding = false,
 }: Props) {
   const headerRef = useRef<HTMLHeadingElement | null>(null);
   const [obseverHeader] = useObsever(headerRef);
 
   return (
     <>
-      <HeaderNav headerRef={headerRef} registerOrLogin={registerOrLogin} />
+      <HeaderNav
+        headerRef={headerRef}
+        registerOrLogin={registerOrLogin}
+        bigPadding={bigPadding}
+      />
       {/* pelo amor de Deus tenho que criar outro container para colocar um menu fixed, se eu colocar o mesmo container causa um LOOP INFINITO */}
       {fixedNav && (
         <ContainerFixed $obseverHeader={obseverHeader}>
@@ -43,12 +49,18 @@ export default function Header({
 const HeaderNav = ({
   headerRef,
   registerOrLogin,
+  bigPadding,
 }: {
   headerRef?: RefObject<HTMLHeadingElement>;
   registerOrLogin?: boolean;
+  bigPadding?: boolean;
 }) => {
   return (
-    <HeaderContainer ref={headerRef} $registerOrLogin={registerOrLogin}>
+    <HeaderContainer
+      ref={headerRef}
+      $registerOrLogin={registerOrLogin}
+      $bigPadding={bigPadding}
+    >
       <nav>
         <Logo />
 

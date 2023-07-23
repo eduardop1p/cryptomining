@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 interface Props {
   $obseverHeader?: boolean;
   $registerOrLogin?: boolean;
+  $bigPadding?: boolean;
 }
 
 export const HeaderContainer = styled.header<Props>`
@@ -14,8 +15,12 @@ export const HeaderContainer = styled.header<Props>`
   position: absolute;
   top: 0;
   z-index: 2;
-  ${({ $registerOrLogin }) =>
-    $registerOrLogin ? 'padding: 3rem 0 10px;' : 'padding: 10px 0;'}
+  ${({ $registerOrLogin, $bigPadding }) =>
+    $registerOrLogin || $bigPadding
+      ? css`
+          padding: 3rem 0 10px;
+        `
+      : 'padding: 10px 0;'}
 
   & > nav {
     display: flex;
