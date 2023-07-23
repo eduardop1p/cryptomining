@@ -117,7 +117,6 @@ export default function FormRegister() {
         draggable
         pauseOnHover
         theme="colored"
-        style={{ zIndex: 6 }}
       />
       <h1>Create Your Account</h1>
       <form onSubmit={handleSubmit(onSubmit)}>

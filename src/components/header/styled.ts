@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header<Props>`
   height: 50px;
   position: absolute;
   top: 0;
-  z-index: 5;
+  z-index: 2;
   ${({ $registerOrLogin }) =>
     $registerOrLogin ? 'padding: 3rem 0 10px;' : 'padding: 10px 0;'}
 
