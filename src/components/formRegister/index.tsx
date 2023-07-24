@@ -82,7 +82,7 @@ export default function FormRegister() {
         emailOrUserName: email,
         password: password,
       });
-      redirect.push('/user/dasboard');
+      redirect.push('/user/dashboard');
     } catch (err: any) {
       toast.error(
         get(err.response, 'data.message', false)

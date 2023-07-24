@@ -5,6 +5,8 @@ import { NextRequest, NextResponse } from 'next/server';
 // eslint-disable-next-line
 export function middleware(req: NextRequest, res: NextResponse) {
   const response = NextResponse.next();
+  response.headers.append('Access-Control-Allow-Origin', 'same-origin');
+
   const cookies = req.cookies;
   const isAuth = cookies.has('token');
   const currentPath = req.nextUrl.pathname;
@@ -15,19 +17,17 @@ export function middleware(req: NextRequest, res: NextResponse) {
     (currentPath === '/login' && isAuth) ||
     (currentPath === '/password/reset' && isAuth)
   ) {
-    return NextResponse.redirect(new URL('/user/dasboard', req.url));
+    return NextResponse.redirect(new URL('/user/dashboard', req.url));
   }
   if (
     (currentPath === '/logout' && !isAuth) ||
-    (currentPath === '/user/dasboard' && !isAuth)
+    (currentPath.includes('/user') && !isAuth)
   ) {
     return NextResponse.redirect(new URL('/login', req.url));
   }
 
   // console.log(currentPath);
   // console.log(cookies.get('token'));
-
-  response.headers.append('Access-Control-Allow-Origin', 'same-origin');
 
   return response;
 }
@@ -41,7 +41,7 @@ export const config = {
   matcher: [
     '/api(.*)',
     '/',
-    '/user/dasboard',
+    '/user(.*)',
     '/register',
     '/login',
     '/password/reset',

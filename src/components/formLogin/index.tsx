@@ -42,7 +42,7 @@ export default function FormLogin() {
     try {
       setLoading(true);
       await axios.post(`${process.env.NEXT_PUBLIC_URL_API}/login`, body);
-      redirect.push('/user/dasboard');
+      redirect.push('/user/dashboard');
     } catch (err: any) {
       toast.error(
         // no get estou verificando se tem data.message dentro de err.response se não ouver ele vai me retonar false
