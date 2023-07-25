@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header<Props>`
   background-color: transparent;
   display: flex;
   justify-content: center;
-  min-width: 1360px;
+  min-width: 1300px;
   width: 100%;
   height: 50px;
   position: absolute;
@@ -164,9 +164,9 @@ export const ContainerLinksIsAuth = styled.div`
         width: 40px;
         height: 40px;
         border-radius: 100%;
-        background-color: #6f42c1;
+        background-color: #f6a200;
         color: #fff;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -181,6 +181,16 @@ export const ContainerLinksIsAuth = styled.div`
       min-height: 70px;
       z-index: 2;
       right: 0;
+      visibility: hidden;
+      transition: visibility 450ms ease-in-out;
+
+      &[data-active='true'] {
+        visibility: visible;
+        & > div {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     }
   }
 `;
@@ -198,17 +208,9 @@ export const ContainerMore = styled.div`
   overflow: hidden;
   transition:
     transform 300ms ease-in-out,
-    opacity 400ms ease-in-out,
-    visibility 450ms ease-in-out;
-  visibility: hidden;
+    opacity 400ms ease-in-out;
   opacity: 0;
   transform: translateY(20px);
-
-  &[data-active='true'] {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
 
   & > a {
     padding: 9px 15px;

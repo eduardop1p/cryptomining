@@ -44,11 +44,11 @@ export default function Home() {
                   START CLOUD MINING SIGN UP TO GET $10
                 </span>
                 <h1 className="title">
-                  CriptoMining is <span>Simple & Secure</span> Way to Enter
+                  CryptoMining is <span>Simple & Secure</span> Way to Enter
                   Crypto Mining.
                 </h1>
                 <p className="paragraph">
-                  Looking for easy to use Cripto Mining site. Trusted By 90,621
+                  Looking for easy to use Crypto Mining site. Trusted By 90,621
                   Bitcoin Miners.
                 </p>
                 <Link className="get-start" href="/login">
@@ -82,7 +82,7 @@ export default function Home() {
               <span>Be connected with us and get profited.</span>
             </h1>
             <p className="paragraph">
-              Cripto Mining is one of the leading cryptocurrency mining
+              Crypto Mining is one of the leading cryptocurrency mining
               platforms, No need to purchase hardware devices, manage devices,
               offering cryptocurrency mining capacities in every range - for
               newcomers. Our mission is to make acquiring cryptocurrencies easy
@@ -115,12 +115,12 @@ export default function Home() {
         <div className="sub-container">
           <section className="features">
             <div className="features-info">
-              <span className="entry-title">CRIPTOMINING FEATURE</span>
+              <span className="entry-title">CRYPTOMINING FEATURE</span>
               <h1 className="title">
-                CriptoMining Offers the <span>Top Most Features</span>
+                CryptoMining Offers the <span>Top Most Features</span>
               </h1>
               <p className="paragraph">
-                Cripto Mining is a cryptocurrency cloud mining platform, we have
+                Crypto Mining is a cryptocurrency cloud mining platform, we have
                 advanced mining cryptocurrency equipment, site, maintenance
                 facilities, we have cheap clean electricity energy, if you want
                 cryptocurrency mining, we are a good choice, Mining
@@ -267,7 +267,7 @@ export default function Home() {
           <section className="clients">
             <h2 className="entry-title">CLIENT SAY</h2>
             <h1 className="title">
-              Our CriptoMining <span>Users Say</span>
+              Our CryptoMining <span>Users Say</span>
             </h1>
             <Slider />
           </section>
@@ -364,9 +364,9 @@ export default function Home() {
               <h1 className="title-footer">Contact Info</h1>
               <Link
                 className="footer-text-links"
-                href="mailto:support@criptomining.email"
+                href="mailto:support@cryptomining.email"
               >
-                Email: support@criptomining.email
+                Email: support@cryptomining.email
               </Link>
               <span className="footer-text-links">
                 46 Leighton Road, London, England, W13 9EH

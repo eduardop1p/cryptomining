@@ -21,7 +21,7 @@ export default function Insigns() {
           <span>90621</span>
           <FaPlus />
         </div>
-        <p>Active CriptoMining Users</p>
+        <p>Active CryptoMining Users</p>
       </div>
       <div style={{ marginTop: '3rem' }}>
         <div className="icon-ins violet">
@@ -31,7 +31,7 @@ export default function Insigns() {
           <span>72,321</span>
           <FaPlus />
         </div>
-        <p>Verified CriptoMining Users</p>
+        <p>Verified CryptoMining Users</p>
       </div>
       <div>
         <div className="icon-ins blue">
@@ -41,7 +41,7 @@ export default function Insigns() {
           <span>59,875</span>
           <FaPlus />
         </div>
-        <p>CriptoMining Gateways</p>
+        <p>CryptoMining Gateways</p>
       </div>
       <div style={{ marginTop: '3rem' }}>
         <div className="icon-ins">
@@ -51,7 +51,7 @@ export default function Insigns() {
           <span>42,348</span>
           <FaPlus />
         </div>
-        <p>CriptoMining Sales</p>
+        <p>CryptoMining Sales</p>
       </div>
     </Container>
   );

@@ -1,0 +1,96 @@
+.container {
+  background: linear-gradient(-45deg, #0f054c 0%, #22196d 100%);
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.container > img{
+  position: absolute;
+  top: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.plan-discount{
+  position: absolute;
+  top: -0.6rem;
+  right: 10px;
+  background-color: #ef6624;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+}
+.plan-title{
+  margin-top: 2.7rem;
+  color: #f6a200;
+  font-size: 30px;
+  font-weight: 600;
+}
+.price{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.price > div{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #fff;
+}
+.plan-price{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+}
+.plan-time{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.plan-before-price{
+  color: #c3bcbc;
+  font-size: 18px;
+  font-weight: 600;
+}
+.plan-before-price > small{
+  text-decoration: line-through;
+}
+.plan-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plan-info > span{
+  padding: 7px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f5f6f6;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+.container > button{
+  border: 2px solid #f6a200;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0 35px;
+  height: 50px;
+  border-radius: 35px;
+  font-weight: 700;
+  box-shadow: 0 3px 32px rgba(255, 74, 0, 0.4);
+  color: #f6a200;
+  cursor: pointer;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out;
+}
+.container > button:hover{
+  background-color: #f6a200;
+  color: #fff;
+}

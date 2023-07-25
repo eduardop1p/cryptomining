@@ -31,7 +31,7 @@ export default function Slider() {
           <ContainerSlide>
             <FaQuoteLeft />
             <p>
-              My experience with CriptoMining was good and am so much impressed
+              My experience with CryptoMining was good and am so much impressed
               with their mining service, {`They're`} the best among all.
             </p>
             <div className="thumb">
@@ -53,7 +53,7 @@ export default function Slider() {
             <FaQuoteLeft />
             <p>
               When you think of Fastness, Reliability, security and power
-              CriptoMining Is the lead. I have been able to mine and earn
+              CryptoMining Is the lead. I have been able to mine and earn
               Bitcoin.
             </p>
             <div className="thumb">
@@ -74,7 +74,7 @@ export default function Slider() {
           <ContainerSlide>
             <FaQuoteLeft />
             <p>
-              {`I'm`} new to the crypto world CriptoMining made it super easy
+              {`I'm`} new to the crypto world CryptoMining made it super easy
               and simple for me to start mining BTC and LTC I think am now a
               cryptoster.
             </p>
@@ -96,7 +96,7 @@ export default function Slider() {
           <ContainerSlide>
             <FaQuoteLeft />
             <p>
-              The profits I get while mining with CriptoMining Is massive,{' '}
+              The profits I get while mining with CryptoMining Is massive,{' '}
               {`can't`} even be compared while trading cryptocurrency. I LOVE
               THIS COMPANY
             </p>

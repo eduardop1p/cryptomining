@@ -1,9 +1,6 @@
 .container{
   min-height: 100vh;
   width: 100%;
-}
-.header-container{
+  background-color: #030239;
   background-image: url(/assets/imgs/bg.png);
-  height: 90px;
-  width: 100%;
 }

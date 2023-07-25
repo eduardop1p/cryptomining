@@ -1,0 +1,79 @@
+.container{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #030239;
+  background-image: url(/assets/imgs/bg.png);
+  position: relative;
+}
+.container::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-size: cover;
+  background-image: url(/assets/imgs/bg-frag.png);
+}
+.plan-info{
+  width: calc(100% - 15rem);
+  padding-top: 10rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+.the-plan{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 2.25rem;
+  border-radius: 5px;
+  background-color: #780af059;
+  color: #fff;
+  width: 100%;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #007dff54;
+  width: 100%;
+}
+.info > p{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+.info > p > span{
+  font-size: 17px;
+  font-weight: 500;
+}
+.blue-text{
+  color:#0066FF
+}
+.red-text{
+  color: #ff0000;
+}
+.ol-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+}
+.ol-info > li{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+.ol-info > li::marker{
+  color: #0066FF;
+}
+

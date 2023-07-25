@@ -15,8 +15,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Cripto Mining | Cloud Mining',
-  description: 'Cripto Mining - A Digital Mining Platform',
+  title: 'Crypto Mining | Cloud Mining',
+  description: 'Crypto Mining - A Digital Mining Platform',
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
           type="image/png"
           sizes="32x32"
           // para pegar arquivos estaticos no nextjs tenho que levar em conta que public já é referenciado no caminho do arquivo
-          href="/assets/imgs/logo-bitcoin-4096.png"
+          href="/assets/imgs/btc.png"
         />
       </head>
       <body className={roboto.className}>

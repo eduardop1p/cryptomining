@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
           <div>
             For more information about our privacy practices, if you have
             questions, or if you would like to make a complaint, please contact
-            us by e‑mail at support@criptomining.email.
+            us by e‑mail at support@cryptomining.email.
           </div>
         </div>
       </div>

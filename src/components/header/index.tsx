@@ -71,15 +71,13 @@ const HeaderNav = ({
   const handleMouseOver = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    const containerMore = event.currentTarget.querySelector('.container-more')
-      ?.firstChild as HTMLDivElement;
+    const containerMore = event.currentTarget.lastChild as HTMLDivElement;
     containerMore.setAttribute('data-active', 'true');
   };
   const handleMouseOut = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    const containerMore = event.currentTarget.querySelector('.container-more')
-      ?.firstChild as HTMLDivElement;
+    const containerMore = event.currentTarget.lastChild as HTMLDivElement;
     containerMore.setAttribute('data-active', 'false');
   };
 
@@ -109,38 +107,109 @@ const HeaderNav = ({
                   <span>Plan</span>
                   <FaChevronDown />
                 </div>
-                <div className="container-more">
-                  <ContainerMore data-active={false}>
-                    <Link href="/user/plan">
-                      <span>Plan</span>
+                <div className="container-more" data-active={false}>
+                  <ContainerMore>
+                    <Link href="/user/plans">
+                      <span>Buy plan</span>
                     </Link>
                     <Link href="/user/purchased">
-                      <span>Purchased</span>
+                      <span>Purchased plans</span>
                     </Link>
                   </ContainerMore>
                 </div>
               </div>
-              <div className="more">
+              <div
+                className="more"
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
                 <div>
                   <span>Found</span>
                   <FaChevronDown />
                 </div>
+                <div className="container-more" data-active={false}>
+                  <ContainerMore>
+                    <Link href="/user/deposit">
+                      <span>Deposit now</span>
+                    </Link>
+                    <Link href="/user/deposit-history">
+                      <span>Deposit log</span>
+                    </Link>
+                  </ContainerMore>
+                </div>
               </div>
-              <div className="more">
+              <div
+                className="more"
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
                 <div>
                   <span>Payout</span>
                   <FaChevronDown />
                 </div>
+                <div className="container-more" data-active={false}>
+                  <ContainerMore>
+                    <Link href="/user/withdraw">
+                      <span>Withdraw now</span>
+                    </Link>
+                    <Link href="/user/withdraw-history">
+                      <span>Withdraw log</span>
+                    </Link>
+                  </ContainerMore>
+                </div>
               </div>
-              <div className="more">
+              <div
+                className="more"
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
                 <div>
                   <span>Referral</span>
                   <FaChevronDown />
                 </div>
+                <div className="container-more" data-active={false}>
+                  <ContainerMore>
+                    <Link href="/user/referral-invite">
+                      <span>Invite friends</span>
+                    </Link>
+                    <Link href="/user/referral-log">
+                      <span>Referral bonus logs</span>
+                    </Link>
+                    <Link href="/user/referral-commlog">
+                      <span>Withdraw logs</span>
+                    </Link>
+                  </ContainerMore>
+                </div>
               </div>
-              <div className="more">
+              <div
+                className="more"
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
                 <div>
-                  <span className="profile">{userName?.slice(0, 1)}</span>
+                  <span className="profile">{userName?.slice(0, 2)}</span>
+                </div>
+                <div className="container-more" data-active={false}>
+                  <ContainerMore>
+                    <Link href="/user/profile-setting">
+                      <span>Profile</span>
+                    </Link>
+                    <Link href="/user/wallets">
+                      <span>Wallets</span>
+                    </Link>
+                    <Link href="/user/ticket">
+                      <span>Support tickets</span>
+                    </Link>
+                    <Link href="/user/twofactor">
+                      <span>2FA security</span>
+                    </Link>
+                    <Link href="/user/change-password">
+                      <span>Change password</span>
+                    </Link>
+                    <Link href="/user/logout">
+                      <span>Logout</span>
+                    </Link>
+                  </ContainerMore>
                 </div>
               </div>
             </ContainerLinksIsAuth>

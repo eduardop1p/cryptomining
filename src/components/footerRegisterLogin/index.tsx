@@ -18,7 +18,7 @@ export default function Footer() {
         sizes="100%"
       />
       <span>
-        Copyright © 2021-{new Date().getFullYear()} Cripto Mining All Right
+        Copyright © 2021-{new Date().getFullYear()} Crypto Mining All Right
         Reserved
       </span>
     </footer>

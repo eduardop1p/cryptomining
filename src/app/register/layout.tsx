@@ -3,8 +3,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cripto Mining | Sign Up',
-  description: 'Cripto Mining Create account',
+  title: 'Crypto Mining | Sign Up',
+  description: 'Crypto Mining Create account',
   keywords: 'cloud mining',
 };
 

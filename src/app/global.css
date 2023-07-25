@@ -8,7 +8,7 @@
 }
 
 body{
-  min-width: 1360px;
+  min-width: 1300px;
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -127,8 +127,9 @@ a{
 .get-start{
   color: #fff;
   display: flex;
-  place-items: center;
-  height: 51px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
   background-color: #f6a200;
   font-size: 1rem;
   padding: 10px 35px;
