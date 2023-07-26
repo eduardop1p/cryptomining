@@ -14,7 +14,6 @@ export const BtnContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 5rem;
 
   & > button {
     cursor: pointer;
@@ -42,7 +41,27 @@ export const BtnContainer = styled.div`
 `;
 
 export const CryptoPlanContainer = styled.div`
-  width: calc(100% - 15rem);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  position: relative;
+  margin-top: 19rem;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-image: url(/assets/imgs/bg.png);
+    background-repeat: no-repeat;
+  }
+
+  & > div {
+    width: calc(100% - 15rem);
+    display: grid;
+    margin: 0 auto;
+    position: relative;
+    top: -13.5rem;
+    gap: 5rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;

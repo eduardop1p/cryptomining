@@ -39,13 +39,13 @@ export default function BTCETHDOG() {
         >
           BTC
         </button>
-        <button
+        {/* <button
           typeof="button"
           onClick={handleClickEth}
           data-active={ethActive}
         >
           ETH
-        </button>
+        </button> */}
         <button
           typeof="button"
           onClick={handleClickDog}
@@ -56,9 +56,11 @@ export default function BTCETHDOG() {
       </BtnContainer>
 
       <CryptoPlanContainer>
-        {btcActive && <BTC />}
-        {ethActive && <ETH />}
-        {dogActive && <DOG />}
+        <div>
+          {btcActive && <BTC />}
+          {/* {ethActive && <ETH />} */}
+          {dogActive && <DOG />}
+        </div>
       </CryptoPlanContainer>
     </Container>
   );
