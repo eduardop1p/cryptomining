@@ -46,8 +46,12 @@ export default function Header({
       />
       {/* pelo amor de Deus tenho que criar outro container para colocar um menu fixed, se eu colocar o mesmo container causa um LOOP INFINITO */}
       {fixedNav && (
-        <ContainerFixed $obseverHeader={obseverHeader}>
-          <HeaderNav isAuth={isAuth} userName={userName} />
+        <ContainerFixed $obseverHeader={obseverHeader} $bigPadding={bigPadding}>
+          <HeaderNav
+            isAuth={isAuth}
+            userName={userName}
+            bigPadding={bigPadding}
+          />
         </ContainerFixed>
       )}
       {fixedNav && <ChevronUp obseverHeader={obseverHeader} />}

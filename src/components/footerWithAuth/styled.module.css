@@ -1,0 +1,32 @@
+.container{
+  position: relative;
+  width: 100%;
+  padding-top: 2rem;
+  background-image: url(/assets/imgs/bg.png);
+}
+.container::before{
+  content: '';
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-image: url(/assets/imgs/bg-tech.png);
+  z-index: 2;
+  background-position: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.05;
+}
+.container::after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-image: url(/assets/imgs/shape2.png);
+  z-index: 1;
+  background-position: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.05;
+}

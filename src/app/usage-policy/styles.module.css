@@ -6,11 +6,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.container-usage-policy > img{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
 }
 
 .usage-policy{
   color: #ffF;
-  margin-top: 4rem;
+  margin-top: 7rem;
   width: calc(100% - 15rem);
 }
 .usage-policy h1{
@@ -29,14 +40,7 @@
   color: #f6f5f5;
   line-height: 1.2;
 }
-.usage-policy ul, .usage-policy ol{
-  margin: 8px 2rem 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.usage-policy li{
-  font-size: 14px;
-  font-weight: 300;
+.footer-container{
+  margin-top: 1rem;
+  width: 100%;
 }

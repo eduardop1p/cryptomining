@@ -2,6 +2,7 @@ import React from 'react';
 import { cookies } from 'next/headers';
 
 import Header from '@/components/header';
+import FooterWihtAuth from '@/components/footerWithAuth';
 
 export default async function Layout({
   children,
@@ -29,6 +30,7 @@ export default async function Layout({
         userName={user.name}
       />
       {children}
+      <FooterWihtAuth />
     </>
   );
 }

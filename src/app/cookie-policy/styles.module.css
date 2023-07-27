@@ -1,4 +1,4 @@
-.container-privacy-policy{
+.container-cookie-policy{
   background-color: #100F43;
   width: 100%;
   padding-top: 2rem;
@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.container-privacy-policy > img{
+.container-cookie-policy > img{
   position: absolute;
   width: 100%;
   left: 0;
@@ -21,37 +21,26 @@
 }
 
 
-.privacy-policy{
+.cookie-policy{
   color: #ffF;
   margin-top: 7rem;
   width: calc(100% - 15rem);
 }
-.privacy-policy h1{
+.cookie-policy h1{
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 600;
 }
-.privacy-policy h2{
+.cookie-policy h2{
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 500;
 }
-.privacy-policy div{
+.cookie-policy div{
   margin-bottom: 10px;
   text-align: left;
   color: #f6f5f5;
   line-height: 1.2;
-}
-.privacy-policy ul, .privacy-policy ol{
-  margin: 8px 2rem 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.privacy-policy li{
-  font-size: 14px;
-  font-weight: 300;
 }
 
 .footer-container{

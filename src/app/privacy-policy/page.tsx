@@ -1,11 +1,39 @@
+import { cookies } from 'next/headers';
+import Image from 'next/image';
+
 import styles from './styles.module.css';
 import Header from '@/components/header';
+import FooterWihtAuth from '@/components/footerWithAuth';
+import Footer from '@/components/footerRegisterLogin';
 
-export default function PrivacyPolicy() {
+export default async function PrivacyPolicy() {
+  const isAuth = cookies().has('token');
+  const token = cookies().get('token')?.value;
+  const data = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/get-user`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    method: 'get',
+    // cache: 'no-cache',
+  });
+  const { user } = await data.json();
+
   return (
     <>
-      <Header />
+      <Header
+        fixedNav={true}
+        registerOrLogin={false}
+        bigPadding={true}
+        isAuth={isAuth}
+        userName={user.name}
+      />
       <div className={styles['container-privacy-policy']}>
+        <Image
+          src="/assets/imgs/bg-frag.png"
+          alt="bg-frag"
+          fill={true}
+          sizes="100%"
+        />
         <div className={styles['privacy-policy']}>
           <h1>Last Updated: May 06 2023</h1>
           <h2>Privacy Policy</h2>
@@ -122,6 +150,9 @@ export default function PrivacyPolicy() {
             questions, or if you would like to make a complaint, please contact
             us by e‑mail at support@cryptomining.email.
           </div>
+        </div>
+        <div className={styles['footer-container']}>
+          {isAuth ? <FooterWihtAuth /> : <Footer />}
         </div>
       </div>
     </>

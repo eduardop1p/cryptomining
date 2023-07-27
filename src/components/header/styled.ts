@@ -66,7 +66,7 @@ export const ContainerLinks = styled.div`
 `;
 
 export const ContainerFixed = styled.div<Props>`
-  height: 50px;
+  height: ${({ $bigPadding }) => ($bigPadding ? '80px' : '50px')};
   background-color: #272d43;
   width: 100%;
   min-width: 1360px;
